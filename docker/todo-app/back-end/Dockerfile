@@ -4,10 +4,10 @@ WORKDIR /site
 
 EXPOSE 3001
 
-ADD node_modules.tar.gz /site/node_modules.tar.gz/
+ADD node_modules.tar.gz ./
 
-COPY package.json /site/package.json/
-COPY .gitignore /site/.gitignore/
+COPY package.json ./
+COPY .gitignore ./
 
 RUN npm install
 
