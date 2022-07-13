@@ -4,9 +4,6 @@ WORKDIR /site
 
 ADD node_modules.tar.gz ./
 
-COPY package.json ./
-COPY jest.config.js ./
+COPY . ./
 
-RUN npm install
-
-CMD ["npm", "test"]
+ENTRYPOINT ["npm", "test"]
